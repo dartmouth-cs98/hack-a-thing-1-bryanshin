@@ -11,7 +11,11 @@ I have done some small, brief projects in Unity, but this tutorial taught me alo
 
 ## What didn't work?
 One thing that I found very difficult was testing the code. Because AR by nature requires camera input, it was nearly impossible to test my application using the Unity editor. There was no way to mimic camera input. One solution I tried to implement was feeding in my webcam's video input, but this was super difficult because in order to do that, I would have to constantly change build platforms from Mac to Android (and vice-versa). The only way I found to test my code was to simply build the application and run in on my phone, which took around 2-3 minutes. This doesn't seem to bad, but since I was inexperienced in the AR making process and had to debug super often, this build time ate up a large chunk of time.
-
+I was also unable to implement different colors of paint. There seems to be an issue with using the Trail Renderer component in Unity, as changing the color of the material and the Trail Renderer both still result in a black line drawn. I tried researching the issue, and it seems that it is comes from a conflict between the new versions of Unity not supporting the outdated Trail Renderer very well.
 
 ## URL to the tutorial I used:
 https://vrgamedevelopment.pro/make-an-ar-drawing-app-part-3/
+
+## Notes:
+* The completed Android application is in the Builds folder.
+* Download the .apk file to your Android device, open it, and install the application.
