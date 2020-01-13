@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// This code was obtained from https://vrgamedevelopment.pro/make-an-ar-drawing-app-part-3/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
@@ -9,7 +10,11 @@ public class Draw : MonoBehaviour
 
     public GameObject stroke;
     public bool mouseLookTesting;
- 
+
+    [HideInInspector]
+    public Transform penPoint;
+
+
     public static bool drawing = false;
 
     private float pitch = 0;
@@ -33,11 +38,13 @@ public class Draw : MonoBehaviour
         }
         if (PenManager.drawingOnSurface)
         {
+        	penPoint = surfacePenPoint.transform;
             spacePenPoint.GetComponent<MeshRenderer>().enabled = false;
             surfacePenPoint.GetComponent<MeshRenderer>().enabled = true;
         }
         else
         {
+        	penPoint = spacePenPoint.transform;
             surfacePenPoint.GetComponent<MeshRenderer>().enabled = false;
             spacePenPoint.GetComponent<MeshRenderer>().enabled = true;
  
@@ -48,7 +55,7 @@ public class Draw : MonoBehaviour
     {
         GameObject currentStroke;
         drawing = true;
-        currentStroke = Instantiate(stroke, spacePenPoint.transform.position, spacePenPoint.transform.rotation) as GameObject;
+        currentStroke = Instantiate(stroke, penPoint.transform.position, penPoint.transform.rotation) as GameObject;
     }
     
     public void EndStroke()

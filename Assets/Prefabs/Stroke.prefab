@@ -140,3 +140,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bf62e2ebcd747d99bdc008f159c5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strokeColor: {r: 1, g: 0, b: 0, a: 0}

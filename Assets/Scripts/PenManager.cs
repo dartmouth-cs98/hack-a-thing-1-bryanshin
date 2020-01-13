@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// This code was obtained from https://vrgamedevelopment.pro/make-an-ar-drawing-app-part-3/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
